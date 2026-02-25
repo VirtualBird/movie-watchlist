@@ -142,6 +142,7 @@ hr {
 .movie-listing{
     display: flex;
     margin-right: auto;
+    margin-bottom: 34px;
 }
 
 .listing-img img{

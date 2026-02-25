@@ -25,7 +25,6 @@ hr {
     margin-bottom: 21px;
 }
 
-
 #header{
     font-size: 2.625rem;
 }
@@ -35,38 +34,48 @@ hr {
 }
 
 .top{
-    color: white;
-    padding: 50px 0px;
     position: relative;
+    padding: 50px 0px;
+    color: white;
+    background-color: #444444;
     background-image: url("images/header-image.png");
     background-size: cover;
-    background-color: #444444;
     background-blend-mode: multiply;
 }
 
-.top .container{
+.header-items {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .container{
-    margin-left: 45px;
-    margin-right: 45px;
+    margin: 0 auto;
+    padding: 0 45px;
+    max-width: 1000px;
 }
 
 .search-bar-wrapper{
-    position: absolute;
     display: flex;
+    position: absolute;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background-color: white;
     border: 1px solid #D1D5DB;
     border-radius: 6px;
+    margin: 0;
+    margin-inline: auto; 
     left: 45px;
     right: 45px;
     bottom: -20px;
+    max-width: 1000px;
 }
 
 #search-input{
@@ -76,8 +85,8 @@ hr {
 
 .search-bar-wrapper label{
     display: flex;
-    width: 100%;
     align-items: center;
+    width: 100%;
 }
 
 .search-bar-wrapper img{
@@ -92,16 +101,21 @@ hr {
 .search-bar-wrapper input{
     width: 100%;
     border: none;
+    font-size: 0.875rem;
+}
+
+.search-bar-wrapper input:focus{
+    outline: none;
 }
 
 .search-bar-wrapper button{
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
     border: none;
     border-left: 1px solid #D1D5DB;
-    background-color: #F9FAFB;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
     color: #374141;
-    padding: 9px 40px;
+    background-color: #F9FAFB;
+    padding: 10px 40px;
     cursor: pointer;
 }
 
@@ -118,8 +132,11 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     flex-grow: 1;
+}
+
+.default-space{
+    justify-content: center;
 }
 
 .movie-listing{
